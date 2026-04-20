@@ -43,8 +43,9 @@ class _CashierMainScreenState extends State<CashierMainScreen> {
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     if (_selectedIndex >= 3) {
       String titleText = 'Lainnya';
-      if (_selectedIndex == 3) titleText = 'Pembelian';
-      else if (_selectedIndex == 4) titleText = 'Produksi';
+      if (_selectedIndex == 3) {
+        titleText = 'Pembelian';
+      } else if (_selectedIndex == 4) titleText = 'Produksi';
       else if (_selectedIndex == 5) titleText = 'Supplier';
       else if (_selectedIndex == 6) titleText = 'Kelola Unit';
       else if (_selectedIndex == 7) titleText = 'Kategori';
