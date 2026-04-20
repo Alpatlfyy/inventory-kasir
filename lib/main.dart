@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'screens/cashier_main_screen.dart';
+import 'screens/auth/login_screen.dart';
 
 void main() {
   GoogleFonts.config.allowRuntimeFetching = false;
@@ -22,47 +22,43 @@ class MyApp extends StatelessWidget {
           background: const Color(0xFFF8FBF5),
         ),
         scaffoldBackgroundColor: const Color(0xFFF8FBF5),
-        textTheme: GoogleFonts.interTextTheme(
-          ThemeData.light().textTheme,
-        ).copyWith(
-          displayLarge: GoogleFonts.inter(
-            fontSize: 32,
-            fontWeight: FontWeight.w800,
-            letterSpacing: -1.2,
-            color: Colors.black87,
-          ),
-          displayMedium: GoogleFonts.inter(
-            fontSize: 28,
-            fontWeight: FontWeight.w800,
-            letterSpacing: -1.0,
-            color: Colors.black87,
-          ),
-          titleLarge: GoogleFonts.inter(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black87,
-          ),
-          bodyLarge: GoogleFonts.inter(
-            fontSize: 16,
-            color: Colors.black87,
-          ),
-          bodyMedium: GoogleFonts.inter(
-            fontSize: 14,
-            color: Colors.black54,
-          ),
-          labelLarge: GoogleFonts.inter(
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 0.5,
-          ),
-          labelSmall: GoogleFonts.inter(
-            fontSize: 10,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 0.5,
-          ),
-        ),
+        textTheme: GoogleFonts.interTextTheme(ThemeData.light().textTheme)
+            .copyWith(
+              displayLarge: GoogleFonts.inter(
+                fontSize: 32,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -1.2,
+                color: Colors.black87,
+              ),
+              displayMedium: GoogleFonts.inter(
+                fontSize: 28,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -1.0,
+                color: Colors.black87,
+              ),
+              titleLarge: GoogleFonts.inter(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.black87,
+              ),
+              bodyLarge: GoogleFonts.inter(fontSize: 16, color: Colors.black87),
+              bodyMedium: GoogleFonts.inter(
+                fontSize: 14,
+                color: Colors.black54,
+              ),
+              labelLarge: GoogleFonts.inter(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 0.5,
+              ),
+              labelSmall: GoogleFonts.inter(
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 0.5,
+              ),
+            ),
       ),
-      home: const CashierMainScreen(),
+      home: const LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
